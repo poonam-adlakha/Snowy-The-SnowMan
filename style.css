@@ -1,0 +1,332 @@
+body {
+    background-color: rgb(9, 35, 70);
+}
+
+.container {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    margin: auto;
+}
+
+.ball1 {
+    position: relative;
+    display: block;
+    width: 9em;
+    height: 9em;
+    background-color: cornsilk;
+    border-radius: 50%;
+    box-shadow: inset -30px -20px 40px rgba(150, 86, 86, 0.521);
+    transform-origin: 0%;
+    transform: translate(-15%, -65%);
+    z-index: 2;
+}
+
+.ball2 {
+    display: block;
+    position: relative;
+    width: 5em;
+    height: 5em;
+    background-color: cornsilk;
+    border-radius: 50%;
+    transform: translate(-170%,-215%);
+    box-shadow: inset -30px -20px 40px rgba(150, 86, 86, 0.521);
+}
+
+.eyesLeft, .eyesRight {
+    display: block;
+    width: 0.8em;
+    height: 0.8em;
+    background-color: rgb(17, 16, 11);
+    border-radius: 50%;
+}
+
+.eyesLeft {
+    transform: translateY(-1150%) translateX(-1550%);
+}
+
+.eyesRight {
+    transform: translateY(-1250%) translateX(-1300%);
+}
+
+.LeftCornea,
+.RightCornea {
+    display: block;
+    position: relative;
+    width: 0.35em;
+    height: 0.35em;
+    border-radius: 50%;
+    background-color: aliceblue;
+}
+
+.LeftCornea {
+    transform: translateY(-2510%) translateX(-3700%);
+}
+
+.RightCornea {
+    transform: translateY(-2510%) translateX(-3250%);
+}
+
+.Nose {
+    position: relative;
+    width: 1em;
+    height: 1em;
+    background-color: tomato;
+    border-radius: 50% 50% 30% 30%;
+    transform: translateY(-820%) translateX(-1280%) rotate(95deg);
+}
+
+.Smile {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    height: 1em;
+    width: 1em;
+    margin: 0 auto;
+    border-bottom: 8px solid #222;
+    border-radius: 100%;
+    display: block;
+    transform: translateY(-560%) translateX(-1430%);
+}
+
+.Buttons:nth-child(1),
+.Buttons:nth-child(2) {
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    position: relative;
+    background-color: rgb(47, 122, 67);
+    display: block;
+    z-index: 3;
+}
+
+.Buttons:nth-child(1) {
+    transform: translateX(-1370%) translateY(-300%);
+}
+
+.Buttons:nth-child(2) {
+    transform: translateX(-1370%) translateY(-180%);
+}
+
+.LeftHand {
+    position: relative;
+    width: 7em;
+    height: 0.3em;
+    background: rgb(19, 19, 19);
+    border-radius: 2%;
+    transform: translate(-335%, -1300%) rotate(-10deg);
+    border-radius: 35%;
+}
+
+.RightHand {
+    width: 7em;
+    height: 0.3em;
+    background: rgb(19, 19, 19);
+    border-radius: 2%;
+    transform: translate(-280%, -1300%) rotate(10deg);
+    border-radius: 35%;
+}
+
+.LeftThumb {
+    width: 1em;
+    height: 0.3em;
+    background: rgb(19, 19, 19);
+    border-radius: 2%;
+    transform: translate(-3700%, -1020%) rotate(-45deg);
+    border-radius: 30%;
+}
+
+.RightThumb {
+    width: 1em;
+    height: 0.3em;
+    background: rgb(19, 19, 19);
+    border-radius: 2%;
+    transform: translate(-2200%, -1020%) rotate(45deg);
+    border-radius: 30%;
+}
+
+.muffler {
+    width: 4em;
+    height: 1em;
+    display: block;
+    position: absolute;
+    background: radial-gradient(red, rgb(235, 129, 115));
+    transform: translateY(-590%) translateX(30%) rotate(-5deg);
+    border-radius: 20%;
+    z-index: 3
+
+}
+
+.mufflerSide {
+    width: 1em;
+    height: 6em;
+    display: block;
+    position: absolute;
+    background: radial-gradient(red, rgb(235, 129, 115));
+    transform: translateY(-100%) translateX(110%) rotate(5deg);
+    border-radius: 20%;
+    z-index: 3;
+}
+
+.mufflerThread:nth-child(1),
+.mufflerThread:nth-child(2),
+.mufflerThread:nth-child(3) {
+    width: 5px;
+    height: 10px;
+    display: block;
+    position: absolute;
+    background: radial-gradient(red, rgb(235, 129, 115));
+    border-radius: 20%;
+    z-index: 3;
+}
+
+.mufflerThread:nth-child(1) {
+    transform: translateY(-40%) translateX(-4950%);
+}
+
+.mufflerThread:nth-child(2) {
+    transform: translateY(-40%) translateX(-4900%);
+}
+
+.mufflerThread:nth-child(3) {
+    transform: translateY(-40%) translateX(-4850%);
+}
+
+.Hat {
+    width: 4em;
+    height: 3em;
+    position: absolute;
+    display: block;
+    background: radial-gradient(rgb(15, 8, 8), rgb(73, 71, 71));
+    transform: translateX(25%) translateY(-435%);
+    border-radius: 10% 10% 0% 0%;
+}
+
+.HatBottom {
+    width: 5em;
+    height: 0.3em;
+    position: absolute;
+    display: block;
+    background: radial-gradient(rgb(15, 8, 8), rgb(73, 71, 71));
+    transform: translateX(10%) translateY(-3400%);
+    border-radius: 10% 10% 0% 0%;
+}
+
+#cool, #angry, #inLove {
+    position: absolute;
+    width: 7em;
+    height: 2em;
+    font-weight: bolder;
+    background: linear-gradient(pink, white);
+    border-radius: 0.5em;
+    transform: translate(-120%, 300%);
+}
+.hiddenSpecs {
+    visibility:hidden;
+}
+.Specs1, .Specs2 {
+    position: relative;
+    display: block;
+    width: 1.1em;
+    height: 0.8em;
+    background: linear-gradient(rgb(123, 123, 199), rgb(55, 48, 48));
+    border: solid 3px rgb(9, 8, 8);
+    border-radius: 1em;
+}
+.Specs1 {
+    transform: translate(-2190%, -790%);
+}
+.Specs2 {
+    transform: translate(-2045%, -890%);
+}
+.specsHold {
+    width: 0.8em;
+    height: 0.2em;
+    background: black;
+    transform: translate(-3860%, -5600%);
+}
+.specsLeft {
+    width: 0.9em;
+    height: 0.15em;
+    background: black;
+    transform: translate(-3680%, -7700%) rotate(10deg);
+}
+.specsRight{
+    width: 0.9em;
+    height: 0.15em;
+    background: black;
+    transform: translate(-3200%, -7700%) rotate(-10deg);
+}
+
+#angry {
+    transform: translate(20%, 300%);
+}
+
+.angryLips {
+    position: absolute;
+    width: 1em;
+    height: 0.2em;
+    background: black;
+    transform: translate(300%, -3300%) rotate(-25deg);
+    z-index: 4;
+}
+
+#inLove {
+    transform: translate(170%, 300%);
+}
+
+.heartLeft, .heartRight {
+    display: flex;
+    position: absolute;
+    transform: translate(-75%, -50%);
+    animation: heart 1s steps(5, start) infinite;
+    visibility: hidden;
+}
+
+.square, .circle1, .circle2 {
+    width: 0.4em;
+    height: 0.4em;
+    border: red solid 3px;
+    background-color: red;
+}
+
+.square {
+    border-left: transparent solid 3px;
+    border-top: transparent solid 3px;
+    transform: translate(-100%, -1200%) rotate(45deg);
+}
+
+.circle1 {
+    border-bottom: transparent solid 3px;
+    border-left: transparent solid 3px;
+    transform: translateY(-1240%) translateX(55%) rotate(-90deg);
+    border-radius: 100px;
+}
+
+.circle2 {
+    border-bottom: transparent solid 3px;
+    border-left: transparent solid 3px;
+    transform: translateY(-1240%) translateX(42%) rotate(5deg);
+    border-radius: 100px;
+}
+
+.heartLeft {
+    transform: translate(35%, 20%);
+}
+.heartRight {
+    transform: translate(125%, 20%);
+}
+
+@keyframes heart {
+    to {
+        visibility: hidden;
+    }
+}
+
+@-webkit-keyframes heart {
+    to {
+        visibility: hidden;
+    }
+}
