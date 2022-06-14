@@ -1,5 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Pacifico&family=Pangolin&display=swap");
+
+:root {
+    --background: rgb(9, 35, 70);
+    --skin: cornsilk;
+    --black: rgb(17, 16, 11);
+    --pupil: aliceblue;
+    --brownShade: rgba(150, 86, 86, 0.521);
+    --nose: tomato;
+    --buttons: rgb(47, 122, 67);
+    --neon: rgb(247, 255, 248);
+}
+
 body {
-    background-color: rgb(9, 35, 70);
+    background-color: var(--background);
+    cursor: pointer;
 }
 
 .container {
@@ -15,9 +29,9 @@ body {
     display: block;
     width: 9em;
     height: 9em;
-    background-color: cornsilk;
+    background-color: var(--skin);
     border-radius: 50%;
-    box-shadow: inset -30px -20px 40px rgba(150, 86, 86, 0.521);
+    box-shadow: inset -30px -20px 40px var(--brownShade);
     transform-origin: 0%;
     transform: translate(-15%, -65%);
     z-index: 2;
@@ -28,17 +42,17 @@ body {
     position: relative;
     width: 5em;
     height: 5em;
-    background-color: cornsilk;
+    background-color: var(--skin);
     border-radius: 50%;
     transform: translate(-170%,-215%);
-    box-shadow: inset -30px -20px 40px rgba(150, 86, 86, 0.521);
+    box-shadow: inset -30px -20px 40px var(--brownShade);
 }
 
 .eyesLeft, .eyesRight {
     display: block;
     width: 0.8em;
     height: 0.8em;
-    background-color: rgb(17, 16, 11);
+    background-color: var(--black);
     border-radius: 50%;
 }
 
@@ -57,7 +71,7 @@ body {
     width: 0.35em;
     height: 0.35em;
     border-radius: 50%;
-    background-color: aliceblue;
+    background-color: var(--pupil);
 }
 
 .LeftCornea {
@@ -72,7 +86,7 @@ body {
     position: relative;
     width: 1em;
     height: 1em;
-    background-color: tomato;
+    background-color: var(--nose);
     border-radius: 50% 50% 30% 30%;
     transform: translateY(-820%) translateX(-1280%) rotate(95deg);
 }
@@ -85,7 +99,7 @@ body {
     height: 1em;
     width: 1em;
     margin: 0 auto;
-    border-bottom: 8px solid #222;
+    border-bottom: 8px solid var(--black);
     border-radius: 100%;
     display: block;
     transform: translateY(-560%) translateX(-1430%);
@@ -97,7 +111,7 @@ body {
     height: 1em;
     border-radius: 50%;
     position: relative;
-    background-color: rgb(47, 122, 67);
+    background-color: var(--buttons);
     display: block;
     z-index: 3;
 }
@@ -114,7 +128,7 @@ body {
     position: relative;
     width: 7em;
     height: 0.3em;
-    background: rgb(19, 19, 19);
+    background: var(--black);
     border-radius: 2%;
     transform: translate(-335%, -1300%) rotate(-10deg);
     border-radius: 35%;
@@ -123,7 +137,7 @@ body {
 .RightHand {
     width: 7em;
     height: 0.3em;
-    background: rgb(19, 19, 19);
+    background: var(--black);
     border-radius: 2%;
     transform: translate(-280%, -1300%) rotate(10deg);
     border-radius: 35%;
@@ -132,7 +146,7 @@ body {
 .LeftThumb {
     width: 1em;
     height: 0.3em;
-    background: rgb(19, 19, 19);
+    background: var(--black);
     border-radius: 2%;
     transform: translate(-3700%, -1020%) rotate(-45deg);
     border-radius: 30%;
@@ -141,7 +155,7 @@ body {
 .RightThumb {
     width: 1em;
     height: 0.3em;
-    background: rgb(19, 19, 19);
+    background: var(--black);
     border-radius: 2%;
     transform: translate(-2200%, -1020%) rotate(45deg);
     border-radius: 30%;
@@ -199,7 +213,7 @@ body {
     height: 3em;
     position: absolute;
     display: block;
-    background: radial-gradient(rgb(15, 8, 8), rgb(73, 71, 71));
+    background: radial-gradient(var(--black), rgb(73, 71, 71));
     transform: translateX(25%) translateY(-435%);
     border-radius: 10% 10% 0% 0%;
 }
@@ -209,7 +223,7 @@ body {
     height: 0.3em;
     position: absolute;
     display: block;
-    background: radial-gradient(rgb(15, 8, 8), rgb(73, 71, 71));
+    background: radial-gradient(var(--black), rgb(73, 71, 71));
     transform: translateX(10%) translateY(-3400%);
     border-radius: 10% 10% 0% 0%;
 }
@@ -217,12 +231,22 @@ body {
 #cool, #angry, #inLove {
     position: absolute;
     width: 7em;
-    height: 2em;
-    font-weight: bolder;
-    background: linear-gradient(pink, white);
+    height: 3em;
+    font-size: 13px;
+    font-family: Pangolin;
+    background: linear-gradient(to right, #FF5F87, #FB0779);
+    border: 3px solid var(--neon);
+    color: var(--skin);
     border-radius: 0.5em;
     transform: translate(-120%, 300%);
+    text-transform: uppercase;
 }
+
+#cool:hover {
+    transform: translate(-120%, 290%);
+    box-shadow: 0 2px 5px 2px var(--skin);
+} 
+
 .hiddenSpecs {
     visibility:hidden;
 }
@@ -231,15 +255,15 @@ body {
     display: block;
     width: 1.1em;
     height: 0.8em;
-    background: linear-gradient(rgb(123, 123, 199), rgb(55, 48, 48));
-    border: solid 3px rgb(9, 8, 8);
-    border-radius: 1em;
+    background: linear-gradient(var(--black), rgb(55, 48, 48));
+    border: solid 3px var(--black);
+    border-radius: 0.4em;
 }
 .Specs1 {
     transform: translate(-2190%, -790%);
 }
 .Specs2 {
-    transform: translate(-2045%, -890%);
+    transform: translate(-2041%, -890%);
 }
 .specsHold {
     width: 0.8em;
@@ -264,6 +288,11 @@ body {
     transform: translate(20%, 300%);
 }
 
+#angry:hover {
+    transform: translate(20%, 290%);
+    box-shadow: 0 2px 3px 2px var(--neon);
+}
+
 .angryLips {
     position: absolute;
     width: 1em;
@@ -275,6 +304,11 @@ body {
 
 #inLove {
     transform: translate(170%, 300%);
+}
+
+#inLove:hover {
+    transform: translate(170%, 290%);
+    box-shadow: 0 2px 3px 2px var(--neon);
 }
 
 .heartLeft, .heartRight {
